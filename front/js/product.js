@@ -17,21 +17,21 @@ fetch(`http://localhost:3000/api/products/${paramsUrl}`)
 .then((product) => {
     console.log(product)
     // ajout des éléments des produits aux sélecteurs
-    img.setAttribute("src", product.imageUrl);
-    img.setAttribute("alt", product.altTxt);
-    title.innerHTML = product.name;
-    price.innerHTML = product.price;
-    description.innerHTML = product.description;
-    document.title = product.name;
+    img.setAttribute("src", product.imageUrl)
+    img.setAttribute("alt", product.altTxt)
+    title.innerHTML = product.name
+    price.innerHTML = product.price
+    description.innerHTML = product.description
+    document.title = product.name
     
     // création de la boucle pour les couleurs
     for (let i = 0; i < product.colors.length; i++) {
-        let color = document.createElement("option");
-        color.setAttribute("value", product.colors[i]);
-        color.innerHTML = product.colors[i];
-        colors.appendChild(color);
+        let color = document.createElement("option")
+        color.setAttribute("value", product.colors[i])
+        color.innerHTML = product.colors[i]
+        colors.appendChild(color)
     }
-});
+})
 
 
 

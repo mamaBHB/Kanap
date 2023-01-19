@@ -16,15 +16,14 @@ fetch("http://localhost:3000/api/products")
     for(let i=0; i<products.length; i++){
     
         // ajout des produits
-        const allProducts = `<section class="items" id="items"> 
+        const allProducts = `
         <a href="./product.html?id=${products[i]._id}">
         <article>
         <img src="${products[i].imageUrl}" alt="${products[i].altTxt}">
         <h3 class="productName">${products[i].name}</h3>
         <p class="productDescription">${products[i].description}</p>
         </article>
-        </a>
-        </section>`
+        </a>`
         
         const addAllProducts = document.getElementById("items")
         addAllProducts.insertAdjacentHTML("beforeend", allProducts)
