@@ -48,7 +48,7 @@ function addToCart() {
     const productCart = JSON.parse(localStorage.getItem("cart"))
 
     // couleur quantité exacte
-    if (quantity.value > 0 && quantity.value <= 100 && color.value != "") {
+    if (quantity > 0 && quantity <= 100 && color != "") {
 
         // check si articles dans le panier
         if (localStorage.getItem("cart")) {
