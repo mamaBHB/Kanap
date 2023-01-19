@@ -48,7 +48,7 @@ function addToCart() {
     const productCart = JSON.parse(localStorage.getItem("cart"))
 
     // couleur quantité exacte
-    if (quantity > 0 || quantity <= 100 || color != "") {
+    if (quantity.value > 0 && quantity.value <= 100 && color.value != "") {
 
         // check si articles dans le panier
         if (localStorage.getItem("cart")) {
@@ -88,7 +88,9 @@ function addToCart() {
             localStorage.setItem("cart", objCart)
             alert("Article ajouté au panier")
         }
-    } 
+    } else{
+        alert("Veuillez sélectionner une couleur, la quantitée doit être comprise entre 1 et 100")
+    }
 
 }
 
